@@ -1,0 +1,161 @@
+/* style.css */
+body {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #33ff33;
+  font-family: 'Fira Code', monospace;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 400% 400%;
+  animation: cyberShift 20s ease infinite;
+  padding: 2rem;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  padding: 3rem;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 2s ease;
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  font-size: 2rem;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.typing-effect {
+  border-right: 2px solid #00ffcc;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: typing 3s steps(40, end) forwards;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #33ff33;
+}
+
+ul.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.skills-list li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+ul.skills-list li span {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.contact-section a {
+  color: #00ffff;
+  text-decoration: underline;
+}
+
+.nav {
+  margin-top: 2rem;
+}
+
+.nav a {
+  color: #33ff33;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+.contact-button {
+  background: transparent;
+  border: 1px solid #00ffcc;
+  padding: 0.5rem 1rem;
+  color: #00ffcc;
+  border-radius: 10px;
+  text-shadow: 0 0 5px #00ffcc;
+  box-shadow: 0 0 10px #00ffcc44;
+  transition: 0.4s;
+}
+
+.contact-button:hover {
+  background-color: #00ffcc22;
+  box-shadow: 0 0 15px #00ffcc88;
+}
+
+/* Animations */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-slide {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes cyberShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.fade-slide {
+  animation: fade-slide 1.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .glass-panel {
+    padding: 2rem;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .typing-effect {
+    font-size: 1rem;
+  }
+
+  .nav a, .contact-button {
+    font-size: 0.95rem;
+    margin-right: 10px;
+  }
+}

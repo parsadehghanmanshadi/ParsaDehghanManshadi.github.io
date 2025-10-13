@@ -6,13 +6,14 @@
 
   <!-- Primary Meta -->
   <title>About Parsa Dehghan | Ethical Hacker & Python Developer</title>
-  <meta name="description" content="Learn more about Parsa Dehghan Manshadi, ethical hacker, Python/Django developer, and network specialist." />
+  <meta name="description" content="Learn more about Parsa Dehghan Manshadi, an ethical hacker, Python/Django developer, and network specialist." />
   <meta name="author" content="Parsa Dehghan" />
+  <meta name="keywords" content="Parsa Dehghan, Ethical Hacker, Python Developer, Django, Cybersecurity, CCNA, MikroTik, Kali Linux, Network Specialist" />
   <meta name="robots" content="index, follow" />
 
   <!-- Canonical & Alternate -->
   <link rel="canonical" href="https://parsadehghanmanshadi.github.io/about.html" />
-  <link rel="alternate" hreflang="fa" href="https://parsadehghanmanshadi.github.io/about-fa.html" />
+  <link rel="alternate" hreflang="fa" href="https://parsadehghanmanshadi.github.io/about_farsi.html" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="About Parsa Dehghan - Cybersecurity & Python Dev" />
@@ -29,6 +30,9 @@
 
   <!-- Google Verification -->
   <meta name="google-site-verification" content="xuCBBEcwn95ddMya9jWB3ZgwhsTjl48gaczpJomA7Wc" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <!-- Fonts & Styles -->
   <link rel="stylesheet" href="style.css" />
@@ -48,32 +52,123 @@
     ]
   }
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fira Code', monospace;
+      background: radial-gradient(circle at top, #001a1a, #000);
+      color: #00ffcc;
+      line-height: 1.8;
+      text-shadow: 0 0 6px #00cccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .glass-panel {
+      background: rgba(0, 30, 30, 0.8);
+      border: 1px solid #00cccc;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #00cccc;
+      padding: 2rem;
+      max-width: 800px;
+      width: 90%;
+      backdrop-filter: blur(12px);
+      animation: fadeIn 1s ease-out;
+    }
+
+    h1, h2 {
+      color: #33ff99;
+      text-align: center;
+    }
+
+    .highlight {
+      color: #00ffff;
+    }
+
+    .profile-pic {
+      display: block;
+      margin: 1.5rem auto;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 2px solid #00ffff;
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills-list li {
+      margin: 8px 0;
+      background: rgba(0, 255, 204, 0.08);
+      padding: 8px 12px;
+      border-radius: 10px;
+      transition: background 0.3s;
+    }
+
+    .skills-list li:hover {
+      background: rgba(0, 255, 204, 0.2);
+    }
+
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .language-switcher {
+      text-align: right;
+      margin-bottom: 1rem;
+    }
+
+    .nav {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .nav a {
+      margin: 0 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
-<body class="cyber-bg">
+
+<body>
   <div class="glass-panel">
 
-    <!-- Language switcher -->
-    <div class="language-switcher" style="text-align: right; margin-bottom: 1rem;">
-      <a href="index.html" hreflang="en" lang="en" dir="ltr"><strong>English</strong></a> | 
-      <a href="about-fa.html" hreflang="fa" lang="fa" dir="rtl">فارسی</a>
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+      <strong>English</strong> | 
+      <a href="about_farsi.html" hreflang="fa" lang="fa" dir="rtl">فارسی</a>
     </div>
 
-    <!-- Heading -->
-    <h1 class="fade-slide">About <span class="highlight">Parsa Dehghan Manshadi</span></h1>
+    <!-- Profile Picture -->
+    <img src="parsa-dehghan-manshadi.jpg" alt="Parsa Dehghan Manshadi portrait" class="profile-pic">
 
-    <!-- About Section -->
-    <section class="fade-in">
-      <p>
-        <strong>Parsa Dehghan Manshadi</strong> is a passionate high school student specializing in ethical hacking, Python programming, Django development, and networking.
-      </p>
-      <p>
-        Despite being young, he has hands-on experience configuring MikroTik routers, studying CCNA, and exploring Kali Linux tools.
-      </p>
+    <!-- Header -->
+    <h1>About <span class="highlight">Parsa Dehghan Manshadi</span></h1>
+
+    <!-- About -->
+    <section>
+      <p><strong>Parsa Dehghan Manshadi</strong> is a passionate high school student specializing in ethical hacking, Python programming, Django development, and computer networks.</p>
+      <p>Despite his young age, he has practical experience configuring MikroTik routers, studying CCNA, and experimenting with Kali Linux tools for cybersecurity learning.</p>
     </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
-      <h2 class="highlight">💻 Skills</h2>
+    <!-- Skills -->
+    <section>
+      <h2>💻 Skills</h2>
       <ul class="skills-list">
         <li>🔐 CEH-level Cybersecurity</li>
         <li>🐍 Python & Django Development</li>
@@ -83,28 +178,27 @@
       </ul>
     </section>
 
-    <!-- Interests Section -->
-    <section class="interests-section">
-      <h2 class="highlight">🎾 Interests</h2>
-      <p>Learning deeply, playing volleyball and tennis, and balancing online and offline life.</p>
+    <!-- Interests -->
+    <section>
+      <h2>🎾 Interests</h2>
+      <p>Deep learning, playing volleyball and tennis, and maintaining balance between online and offline life.</p>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <h2 class="highlight">📞 Contact</h2>
+    <!-- Contact -->
+    <section>
+      <h2>📞 Contact</h2>
       <p>
-        <strong>Phone:</strong> +98 916 251 0463<br />
+        <strong>Phone:</strong> +98 916 251 0463<br>
         <strong>Email:</strong> <a href="mailto:fbytyngfsfgfreedownload@gmail.com">fbytyngfsfgfreedownload@gmail.com</a>
       </p>
     </section>
 
     <!-- Navigation -->
-    <div class="nav fade-in">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active">About</a>
+    <div class="nav">
+      <a href="index.html">Home</a> |
+      <a href="about.html" class="active">About</a> |
+      <a href="index_farsi.html" hreflang="fa">خانه</a>
     </div>
-
   </div>
 </body>
 </html>
-

@@ -1,204 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Primary Meta -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Parsa Dehghan | Ethical Hacker & Python Developer</title>
   <meta name="description" content="Learn more about Parsa Dehghan Manshadi, an ethical hacker, Python/Django developer, and network specialist." />
-  <meta name="author" content="Parsa Dehghan" />
-  <meta name="keywords" content="Parsa Dehghan, Ethical Hacker, Python Developer, Django, Cybersecurity, CCNA, MikroTik, Kali Linux, Network Specialist" />
+  <meta name="keywords" content="Parsa Dehghan, Parsa Dehghan Manshadi, Ethical Hacker, Python Developer, Django, Cybersecurity, CCNA, MikroTik, Kali Linux, Network Specialist" />
+  <meta name="author" content="Parsa Dehghan Manshadi" />
   <meta name="robots" content="index, follow" />
-
-  <!-- Canonical & Alternate -->
   <link rel="canonical" href="https://parsadehghanmanshadi.github.io/about.html" />
   <link rel="alternate" hreflang="fa" href="https://parsadehghanmanshadi.github.io/about_farsi.html" />
-
-  <!-- Open Graph -->
+  <link rel="alternate" hreflang="en" href="https://parsadehghanmanshadi.github.io/about.html" />
   <meta property="og:title" content="About Parsa Dehghan - Cybersecurity & Python Dev" />
   <meta property="og:description" content="Discover the skills and passions of Parsa Dehghan: ethical hacker, Python/Django coder, and network expert." />
   <meta property="og:image" content="https://parsadehghanmanshadi.github.io/parsa-dehghan-manshadi.jpg" />
   <meta property="og:url" content="https://parsadehghanmanshadi.github.io/about.html" />
   <meta property="og:type" content="profile" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Parsa Dehghan - Cybersecurity & Python Dev" />
   <meta name="twitter:description" content="Discover the skills and passions of Parsa Dehghan." />
   <meta name="twitter:image" content="https://parsadehghanmanshadi.github.io/parsa-dehghan-manshadi.jpg" />
-
-  <!-- Google Verification -->
   <meta name="google-site-verification" content="xuCBBEcwn95ddMya9jWB3ZgwhsTjl48gaczpJomA7Wc" />
-
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- Fonts & Styles -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
-
-  <!-- Schema.org Person Markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Parsa Dehghan Manshadi",
-    "url": "https://parsadehghanmanshadi.github.io",
-    "image": "https://parsadehghanmanshadi.github.io/parsa-dehghan-manshadi.jpg",
-    "jobTitle": "Ethical Hacker, Python Developer, Network Specialist",
-    "sameAs": [
-      "https://github.com/parsadehghanmanshadi"
-    ]
-  }
-  </script>
-
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Fira Code', monospace;
-      background: radial-gradient(circle at top, #001a1a, #000);
-      color: #00ffcc;
-      line-height: 1.8;
-      text-shadow: 0 0 6px #00cccc;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .glass-panel {
-      background: rgba(0, 30, 30, 0.8);
-      border: 1px solid #00cccc;
-      border-radius: 20px;
-      box-shadow: 0 0 25px #00cccc;
-      padding: 2rem;
-      max-width: 800px;
-      width: 90%;
-      backdrop-filter: blur(12px);
-      animation: fadeIn 1s ease-out;
-    }
-
-    h1, h2 {
-      color: #33ff99;
-      text-align: center;
-    }
-
-    .highlight {
-      color: #00ffff;
-    }
-
     .profile-pic {
       display: block;
-      margin: 1.5rem auto;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      border: 2px solid #00ffff;
-      box-shadow: 0 0 15px #00ffff;
+      margin: 1rem auto;
+      width: 320px;
+      height: 180px; /* نسبت 16:9 */
+      object-fit: cover;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 15px #00ffcc;
+      transition: transform 0.3s ease;
     }
-
-    .skills-list {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .skills-list li {
-      margin: 8px 0;
-      background: rgba(0, 255, 204, 0.08);
-      padding: 8px 12px;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-
-    .skills-list li:hover {
-      background: rgba(0, 255, 204, 0.2);
-    }
-
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .language-switcher {
-      text-align: right;
-      margin-bottom: 1rem;
-    }
-
-    .nav {
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    .nav a {
-      margin: 0 10px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
+    .profile-pic:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
-
 <body>
-  <div class="glass-panel">
-
-    <!-- Language Switcher -->
-    <div class="language-switcher">
-      <strong>English</strong> | 
-      <a href="about_farsi.html" hreflang="fa" lang="fa" dir="rtl">فارسی</a>
+  <!-- Navigation -->
+  <nav class="bg-gray-900 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="text-2xl font-bold text-indigo-400">Parsa Dehghan</a>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="index.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">Home</a>
+          <a href="about.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">About</a>
+          <a href="https://github.com/parsadehghanmanshadi" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">GitHub</a>
+          <a href="mailto:fbytyngfsfgfreedownload@gmail.com" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md contact-button">Contact</a>
+          <a href="about_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">فارسی</a>
+        </div>
+      </div>
     </div>
+  </nav>
 
-    <!-- Profile Picture -->
-    <img src="parsa-dehghan-manshadi.jpg" alt="Parsa Dehghan Manshadi portrait" class="profile-pic">
+  <!-- Main Content -->
+  <div class="glass-panel fade-in">
+    <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">About <span class="highlight">Parsa Dehghan Manshadi</span></h1>
+    
+    <img src="parsa-dehghan-manshadi.jpg" alt="Parsa Dehghan Manshadi" class="profile-pic fade-in" loading="lazy">
 
-    <!-- Header -->
-    <h1>About <span class="highlight">Parsa Dehghan Manshadi</span></h1>
-
-    <!-- About -->
-    <section>
-      <p><strong>Parsa Dehghan Manshadi</strong> is a passionate high school student specializing in ethical hacking, Python programming, Django development, and computer networks.</p>
-      <p>Despite his young age, he has practical experience configuring MikroTik routers, studying CCNA, and experimenting with Kali Linux tools for cybersecurity learning.</p>
-    </section>
-
-    <!-- Skills -->
-    <section>
-      <h2>💻 Skills</h2>
-      <ul class="skills-list">
-        <li>🔐 CEH-level Cybersecurity</li>
-        <li>🐍 Python & Django Development</li>
-        <li>🖥️ Linux (bash, scripting, automation)</li>
-        <li>🌐 WordPress Customization</li>
-        <li>📡 Networking: CCNA & MikroTik Configuration</li>
-      </ul>
-    </section>
-
-    <!-- Interests -->
-    <section>
-      <h2>🎾 Interests</h2>
-      <p>Deep learning, playing volleyball and tennis, and maintaining balance between online and offline life.</p>
-    </section>
-
-    <!-- Contact -->
-    <section>
-      <h2>📞 Contact</h2>
-      <p>
-        <strong>Phone:</strong> +98 916 251 0463<br>
-        <strong>Email:</strong> <a href="mailto:fbytyngfsfgfreedownload@gmail.com">fbytyngfsfgfreedownload@gmail.com</a>
+    <section class="fade-in">
+      <p class="text-lg leading-relaxed mb-4">
+        I'm <strong>Parsa Dehghan Manshadi</strong>, a high school student passionate about <b>cybersecurity</b>, <b>Python programming</b>, and <b>computer networking</b>.
+      </p>
+      <p class="text-lg leading-relaxed">
+        Despite my young age, I have practical experience configuring <b>MikroTik routers</b>, studying <b>CCNA</b>, and experimenting with <b>Kali Linux</b> tools for cybersecurity learning. My goal is to create secure and innovative digital solutions.
       </p>
     </section>
 
-    <!-- Navigation -->
-    <div class="nav">
-      <a href="index.html">Home</a> |
-      <a href="about.html" class="active">About</a> |
-      <a href="index_farsi.html" hreflang="fa">خانه</a>
-    </div>
+    <section class="skills-section mt-12 fade-in">
+      <h2 class="text-2xl font-bold mb-6 highlight">💻 Skills</h2>
+      <ul class="skills-list text-lg">
+        <li><span>🔐</span> CEH-level Cybersecurity</li>
+        <li><span>🐍</span> Python & Django Development</li>
+        <li><span>🖥️</span> Linux (bash, scripting, automation)</li>
+        <li><span>🌐</span> Networking: CCNA & MikroTik Configuration</li>
+        <li><span>💡</span> WordPress Customization</li>
+      </ul>
+    </section>
+
+    <section class="interests-section mt-12 fade-in">
+      <h2 class="text-2xl font-bold mb-6 highlight">🎾 Interests</h2>
+      <p class="text-lg">
+        Deep learning, playing volleyball and tennis, and maintaining balance between online and offline life.
+      </p>
+    </section>
+
+    <section class="contact-section mt-12 fade-in">
+      <h2 class="text-2xl font-bold mb-6 highlight">📞 Contact</h2>
+      <p class="text-lg">
+        <strong>Phone:</strong> +98 916 251 0463<br>
+        <strong>Email:</strong> <a href="mailto:fbytyngfsfgfreedownload@gmail.com">fbytyngfsfgfreedownload@gmail.com</a><br>
+        <strong>GitHub:</strong> <a href="https://github.com/parsadehghanmanshadi">github.com/parsadehghanmanshadi</a><br>
+        <strong>LinkedIn:</strong> <a href="https://linkedin.com/in/parsadehghanmanshadi">linkedin.com/in/parsadehghanmanshadi</a>
+      </p>
+    </section>
   </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="fade-in">&copy; 2025 Parsa Dehghan Manshadi. All rights reserved.</p>
+      <div class="mt-4 flex justify-center space-x-4">
+        <a href="https://github.com/parsadehghanmanshadi" class="hover:text-indigo-400">GitHub</a>
+        <a href="https://linkedin.com/in/parsadehghanmanshadi" class="hover:text-indigo-400">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fade-in animation on scroll
+    document.addEventListener('DOMContentLoaded', () => {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1 });
+      elements.forEach(element => observer.observe(element));
+    });
+  </script>
 </body>
 </html>

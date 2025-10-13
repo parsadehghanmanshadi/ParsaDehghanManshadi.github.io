@@ -1,58 +1,60 @@
-/* style.css */
+/* Modern Cyber Glass Style - 2025 */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap');
+
 body {
-  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
-  color: #33ff33;
-  font-family: 'Fira Code', monospace;
+  background: radial-gradient(circle at top, #0e0e0e, #000);
+  color: #e0e0e0;
+  font-family: 'JetBrains Mono', monospace;
   min-height: 100vh;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-size: 400% 400%;
-  animation: cyberShift 20s ease infinite;
   padding: 2rem;
   box-sizing: border-box;
   flex-direction: column;
+  animation: fadeInBody 1.5s ease;
 }
 
 .glass-panel {
-  background: rgba(0, 0, 0, 0.5);
-  border: 2px solid #00ffcc;
-  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 255, 200, 0.3);
+  box-shadow: 0 0 40px rgba(0, 255, 200, 0.1);
   padding: 3rem;
-  border-radius: 20px;
-  max-width: 800px;
+  border-radius: 16px;
+  max-width: 850px;
   width: 100%;
-  backdrop-filter: blur(10px);
-  animation: fadeIn 2s ease;
-  box-sizing: border-box;
+  backdrop-filter: blur(15px);
+  animation: floatUp 1.5s ease;
 }
 
 h1, h2 {
-  font-size: 2rem;
-  color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc;
+  color: #00ffd9;
+  font-weight: 600;
   margin-bottom: 1rem;
+  text-shadow: 0 0 15px rgba(0, 255, 217, 0.5);
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  color: #d0d0d0;
 }
 
 .highlight {
-  color: #00ffcc;
-  text-shadow: 0 0 8px #00ffcc;
+  color: #00ffd9;
+  font-weight: 600;
 }
 
 .typing-effect {
-  border-right: 2px solid #00ffcc;
+  border-right: 3px solid #00ffd9;
   white-space: nowrap;
   overflow: hidden;
   width: 0;
-  animation: typing 3s steps(40, end) forwards;
+  animation: typing 3s steps(40, end) forwards, blink 1s step-end infinite;
   font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #33ff33;
+  color: #e0e0e0;
+  margin-bottom: 1.5rem;
 }
 
 ul.skills-list {
@@ -70,44 +72,56 @@ ul.skills-list li {
 ul.skills-list li span {
   margin-right: 10px;
   font-size: 1.2rem;
-}
-
-.contact-section a {
-  color: #00ffff;
-  text-decoration: underline;
+  color: #00ffd9;
 }
 
 .nav {
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav a {
-  color: #33ff33;
+  color: #00ffd9;
   text-decoration: none;
-  margin-right: 20px;
   font-size: 1rem;
+  font-weight: 600;
+  transition: 0.3s;
+  position: relative;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00ffd9;
   transition: 0.3s;
 }
 
-.nav a:hover {
-  color: #00ffcc;
-  text-shadow: 0 0 8px #00ffcc;
+.nav a:hover::after {
+  width: 100%;
 }
 
 .contact-button {
-  background: transparent;
-  border: 1px solid #00ffcc;
-  padding: 0.5rem 1rem;
-  color: #00ffcc;
-  border-radius: 10px;
-  text-shadow: 0 0 5px #00ffcc;
-  box-shadow: 0 0 10px #00ffcc44;
-  transition: 0.4s;
+  background: linear-gradient(90deg, #00ffd9, #0078ff);
+  border: none;
+  padding: 0.7rem 1.3rem;
+  color: #000;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(0, 255, 217, 0.4);
+  transition: 0.3s;
 }
 
 .contact-button:hover {
-  background-color: #00ffcc22;
-  box-shadow: 0 0 15px #00ffcc88;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 255, 217, 0.6);
 }
 
 /* Animations */
@@ -116,28 +130,18 @@ ul.skills-list li span {
   to { width: 100% }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(40px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fade-slide {
-  0% { opacity: 0; transform: translateY(20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes cyberShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-.fade-in {
-  animation: fadeIn 1.5s ease forwards;
-}
-
-.fade-slide {
-  animation: fade-slide 1.5s ease forwards;
 }
 
 /* Responsive Design */
@@ -147,15 +151,18 @@ ul.skills-list li span {
   }
 
   h1, h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
-  .typing-effect {
+  p {
     font-size: 1rem;
   }
 
-  .nav a, .contact-button {
+  .typing-effect {
     font-size: 0.95rem;
-    margin-right: 10px;
+  }
+
+  .nav a, .contact-button {
+    font-size: 0.9rem;
   }
 }

@@ -1,0 +1,10 @@
+
+User-agent: *
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /backup/
+Disallow: /scripts/
+
+Sitemap: https://parsadehghanmanshadi.github.io/sitemap.xml
+
+Crawl-delay: 5

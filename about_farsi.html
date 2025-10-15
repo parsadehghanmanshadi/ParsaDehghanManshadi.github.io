@@ -34,8 +34,9 @@
     .profile-pic {
       display: block;
       margin: 1rem auto;
-      width: 320px;
-      height: 180px; /* نسبت 16:9 */
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 0.5rem;
       box-shadow: 0 0 15px #00ffcc;
@@ -49,6 +50,29 @@
       text-align: right;
       font-family: 'Vazirmatn', sans-serif;
     }
+    @media (max-width: 640px) {
+      .glass-panel {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      p, ul.skills-list li {
+        font-size: 0.9rem;
+      }
+      .nav a, .contact-button {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+      }
+      .profile-pic {
+        max-width: 100%;
+        width: 90vw;
+      }
+    }
   </style>
 </head>
 <body>
@@ -59,7 +83,7 @@
         <div class="flex items-center">
           <a href="index_farsi.html" class="text-2xl font-bold text-indigo-400">پارسا دهقان</a>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4 space-x-reverse">
           <a href="index_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">خانه</a>
           <a href="about_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">درباره من</a>
           <a href="https://github.com/parsadehghanmanshadi" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">گیت‌هاب</a>
@@ -74,7 +98,7 @@
   <div class="glass-panel fade-in">
     <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">درباره <span class="highlight">پارسا دهقان منشادی</span></h1>
     
-    <img src="preview.jpg" alt="پارسا دهقان منشادی" class="profile-pic fade-in" loading="lazy">
+    <img src="preview.jpg" alt="پارسا دهقان منشادی" class="profile-pic fade-in" loading="lazy" onerror="this.src='https://via.placeholder.com/320x180'">
 
     <section class="persian-text fade-in">
       <p class="text-lg leading-relaxed mb-4">
@@ -121,7 +145,7 @@
   <footer class="bg-gray-900 text-gray-300 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="fade-in">&copy; 2025 پارسا دهقان منشادی. تمامی حقوق محفوظ است.</p>
-      <div class="mt-4 flex justify-center space-x-4">
+      <div class="mt-4 flex justify-center space-x-4 space-x-reverse">
         <a href="https://github.com/parsadehghanmanshadi" class="hover:text-indigo-400">GitHub</a>
         <a href="https://linkedin.com/in/parsadehghanmanshadi" class="hover:text-indigo-400">LinkedIn</a>
       </div>
@@ -129,7 +153,6 @@
   </footer>
 
   <script>
-    // Fade-in animation on scroll
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {

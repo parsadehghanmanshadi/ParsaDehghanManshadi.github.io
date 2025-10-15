@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parsa Dehghan Manshadi | Ethical Hacker & Python Developer</title>
   <meta name="description" content="Official website of Parsa Dehghan Manshadi — Ethical Hacker, Python & Django Developer, and Network Specialist. Explore cybersecurity tutorials, projects, and programming insights." />
   <meta name="keywords" content="Parsa Dehghan, Parsa Dehghan Manshadi, Ethical Hacker, Python Developer, Django Developer, Cybersecurity, CCNA, Mikrotik, Network Engineer, Persian Developer" />
@@ -16,7 +16,6 @@
   <meta property="og:image" content="https://parsadehghanmanshadi.github.io/parsa-dehghan-manshadi.jpg" />
   <meta property="og:url" content="https://parsadehghanmanshadi.github.io/" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Parsa Dehghan - Ethical Hacker & Python Developer" />
   <meta property="og:description" content="Cybersecurity, Python/Django projects, and advanced networking insights." />
@@ -26,28 +25,14 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'JetBrains Mono', monospace;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-    }
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-    }
     .profile-pic {
       display: block;
       margin: 1rem auto;
-      width: 320px;
-      height: 180px;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 0.5rem;
       box-shadow: 0 0 15px #00ffcc;
@@ -56,52 +41,23 @@
     .profile-pic:hover {
       transform: scale(1.05);
     }
-    .highlight {
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ccff;
-    }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .typing-effect {
-      border-right: 3px solid #00ffcc;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(40, end) forwards, blink 1s step-end infinite;
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 1.5rem;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #00ccff;
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       .glass-panel {
-        margin: 1rem;
-        padding: 1.5rem;
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      p, .typing-effect {
+        font-size: 0.9rem;
       }
       .profile-pic {
-        width: 280px;
-        height: 157.5px; /* حفظ نسبت 16:9 */
+        max-width: 100%;
+        width: 90vw;
       }
     }
   </style>
@@ -118,7 +74,7 @@
           <a href="index.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">Home</a>
           <a href="about.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">About</a>
           <a href="https://github.com/parsadehghanmanshadi" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">GitHub</a>
-          <a href="mailto:fbytyngfsfgfreedownload@gmail.com" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">Contact</a>
+          <a href="mailto:fbytyngfsfgfreedownload@gmail.com" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md contact-button">Contact</a>
           <a href="index_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">فارسی</a>
         </div>
       </div>
@@ -129,7 +85,7 @@
   <div class="glass-panel fade-in">
     <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">Hey, I'm <span class="highlight">Parsa Dehghan Manshadi</span></h1>
     
-    <img src="parsa-dehghan-manshadi.jpg" alt="Parsa Dehghan Manshadi" class="profile-pic fade-in">
+    <img src="parsa-dehghan-manshadi.jpg" alt="Parsa Dehghan Manshadi" class="profile-pic fade-in" loading="lazy" onerror="this.src='https://via.placeholder.com/320x180'">
 
     <p class="text-lg leading-relaxed mb-4 fade-in typing-effect">
       Student · Networker · Ethical Hacker · Python Developer
@@ -156,7 +112,6 @@
   </footer>
 
   <script>
-    // Fade-in animation on scroll
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {

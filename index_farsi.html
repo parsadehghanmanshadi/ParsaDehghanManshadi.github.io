@@ -26,28 +26,15 @@
 
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    body {
-      font-family: 'Vazirmatn', sans-serif;
-      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-      color: #e0e0e0;
-      margin: 0;
-      padding: 0;
-    }
-    .glass-panel {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border-radius: 1rem;
-      padding: 2rem;
-      margin: 2rem auto;
-      max-width: 900px;
-      box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);
-    }
     .profile-pic {
       display: block;
       margin: 1rem auto;
-      width: 320px;
-      height: 180px;
+      width: 100%;
+      max-width: 320px;
+      aspect-ratio: 16 / 9;
       object-fit: cover;
       border-radius: 0.5rem;
       box-shadow: 0 0 15px #00ffcc;
@@ -56,52 +43,28 @@
     .profile-pic:hover {
       transform: scale(1.05);
     }
-    .highlight {
-      color: #00ffcc;
-      text-shadow: 0 0 10px #00ccff;
+    [dir="rtl"] .persian-text {
+      direction: rtl;
+      text-align: right;
+      font-family: 'Vazirmatn', sans-serif;
     }
-    .fade-in {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .fade-in.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .typing-effect {
-      border-right: 3px solid #00ffcc;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(40, end) forwards, blink 1s step-end infinite;
-      font-size: 1.1rem;
-      color: #e0e0e0;
-      margin-bottom: 1.5rem;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    a {
-      color: #00ffcc;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #00ccff;
-      text-decoration: underline;
-    }
-    @media (max-width: 768px) {
+    @media (max-width: 640px) {
       .glass-panel {
-        margin: 1rem;
-        padding: 1.5rem;
+        padding: 1rem;
+        margin: 0.5rem;
+      }
+      h1 {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+      p, .typing-effect {
+        font-size: 0.9rem;
       }
       .profile-pic {
-        width: 280px;
-        height: 157.5px; /* حفظ نسبت 16:9 */
+        max-width: 100%;
+        width: 90vw;
       }
     }
   </style>
@@ -114,11 +77,11 @@
         <div class="flex items-center">
           <a href="index_farsi.html" class="text-2xl font-bold text-indigo-400">پارسا دهقان</a>
         </div>
-        <div class="flex items-center space-x-4">
+        <div class="flex items-center space-x-4 space-x-reverse">
           <a href="index_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">خانه</a>
           <a href="about_farsi.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">درباره من</a>
           <a href="https://github.com/parsadehghanmanshadi" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">گیت‌هاب</a>
-          <a href="mailto:fbytyngfsfgfreedownload@gmail.com" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">تماس</a>
+          <a href="mailto:fbytyngfsfgfreedownload@gmail.com" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md contact-button">تماس</a>
           <a href="index.html" class="text-gray-300 hover:text-indigo-400 px-3 py-2 rounded-md">English</a>
         </div>
       </div>
@@ -129,13 +92,13 @@
   <div class="glass-panel fade-in">
     <h1 class="text-3xl md:text-4xl font-bold text-center mb-8">سلام، من <span class="highlight">پارسا دهقان منشادی</span> هستم</h1>
     
-    <img src="preview.jpg" alt="پارسا دهقان منشادی" class="profile-pic fade-in">
+    <img src="preview.jpg" alt="پارسا دهقان منشادی" class="profile-pic fade-in" loading="lazy" onerror="this.src='https://via.placeholder.com/320x180'">
 
-    <p class="text-lg leading-relaxed mb-4 fade-in typing-effect">
+    <p class="text-lg leading-relaxed mb-4 fade-in typing-effect persian-text">
       برنامه‌نویس پایتون و جنگو، متخصص امنیت سایبری و علاقه‌مند به شبکه‌های کامپیوتری.
     </p>
 
-    <section class="mt-8 fade-in">
+    <section class="mt-8 fade-in persian-text">
       <h2 class="text-2xl font-bold mb-4 highlight">درباره من</h2>
       <p class="text-lg leading-relaxed">
         من <strong>پارسا دهقان منشادی</strong> هستم، دانش‌آموزی با اشتیاق به فناوری. در زمینه <strong>هک اخلاقی</strong>، <strong>برنامه‌نویسی پایتون و جنگو</strong> و <strong>شبکه (CCNA & Mikrotik)</strong> تخصص دارم. هدفم خلق راه‌حل‌های امن و نوآورانه است.
@@ -147,7 +110,7 @@
   <footer class="bg-gray-900 text-gray-300 py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <p class="fade-in">&copy; 2025 پارسا دهقان منشادی. تمامی حقوق محفوظ است.</p>
-      <div class="mt-4 flex justify-center space-x-4">
+      <div class="mt-4 flex justify-center space-x-4 space-x-reverse">
         <a href="https://github.com/parsadehghanmanshadi" class="hover:text-indigo-400">GitHub</a>
         <a href="https://linkedin.com/in/parsadehghanmanshadi" class="hover:text-indigo-400">LinkedIn</a>
       </div>
@@ -155,7 +118,6 @@
   </footer>
 
   <script>
-    // Fade-in animation on scroll
     document.addEventListener('DOMContentLoaded', () => {
       const elements = document.querySelectorAll('.fade-in');
       const observer = new IntersectionObserver((entries) => {
